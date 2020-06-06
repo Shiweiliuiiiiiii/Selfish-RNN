@@ -1,10 +1,8 @@
-> 📋A template README.md for code accompanying a Machine Learning paper
+# Selfish-RNN Sparse Recurrent Neural Networks with Adaptive Connectivity
 
-# My Paper Title
+This repository is the official implementation of Neurips 2020 submission 6137: Selfish-RNN Sparse Recurrent Neural Networks with Adaptive Connectivity
 
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
-
-> 📋Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+![What is this](lstm_algorithm_v2.png)
 
 ## Requirements
 
