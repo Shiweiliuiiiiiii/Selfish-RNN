@@ -11,13 +11,17 @@ You can download it via anaconda or pip, see [PyTorch/get-started](https://pytor
 
 ## Training
 
-To train Selfish stacked-LSTM on PTB dataset on GPU in the paper, run this command:
+To train Selfish stacked-LSTM on PTB dataset with GPU in the paper, run this command:
 
 ```
 python main.py --sparse --optimizer sgd --model LSTM --cuda --growth random --death magnitude --redistribution none --nonmono 5 --batch_size 20 --bptt 35 --lr 40 --clip 0.25 --seed 5 --emsize 1500 --nhid 1500 --nlayers 2 --death-rate 0.7 --dropout 0.65 --density 0.33 --epochs 100
 ```
 
-> 📋Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
+To train Selfish RHN on PTB dataset with GPU in the paper, run this command:
+
+```
+python main.py --sparse --optimizer sgd --model LSTM --cuda --growth random --death magnitude --redistribution none --nonmono 5 --batch_size 20 --bptt 35 --lr 40 --clip 0.25 --seed 5 --emsize 1500 --nhid 1500 --nlayers 2 --death-rate 0.7 --dropout 0.65 --density 0.33 --epochs 100
+```
 
 ## Evaluation
 
