@@ -6,7 +6,8 @@ This repository is the official implementation of Neurips 2020 submission 6137: 
 
 ## Requirements
 
-The library requires PyTorch v1.0.1 and CUDA v9.0. You can download it via anaconda or pip, see PyTorch/get-started for further information. 
+The library requires PyTorch v1.0.1 and CUDA v9.0. 
+You can download it via anaconda or pip, see [PyTorch/get-started](https://pytorch.org/get-started/locally/) for further information. 
 
 ## Training
 
