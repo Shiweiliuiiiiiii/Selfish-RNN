@@ -2,7 +2,7 @@
 
 This repository is the official implementation of Neurips 2020 submission 6137: Selfish-RNN Sparse Recurrent Neural Networks with Adaptive Connectivity
 
-![What is this](lstm_algorithm_v2.png)
+![](Selfish-RNN.png)
 
 ## Requirements
 
