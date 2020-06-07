@@ -23,7 +23,7 @@ python main.py --sparse --optimizer sgd --model RHN --cuda --tied --couple --see
 
 ```
 
-To train Selfish ONLSTM on PTB dataset with GPU in the paper, run this command:
+To train Selfish ONLSTM on PTB dataset with GPU in the paper, run this two commands:
 ```
 cd ONLSTM
 python main_ONLSTM.py --sparse --optimizer sgd --growth random --death magnitude --redistribution none --density 0.45 --death-rate 0.5 --batch_size 20 --dropout 0.45 --dropouth 0.3 --dropouti 0.5 --nonmono 5 --wdrop 0.45 --chunk_size 10 --seed 141 --epoch 1000
