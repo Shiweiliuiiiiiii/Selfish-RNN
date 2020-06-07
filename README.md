@@ -42,8 +42,7 @@ Options:
 * --density (float) - density level (default 0.33)
 * --death-rate (float) - initial pruning rate (default 0.5)
 
-## Evaluation 
-
+## Evaluation
 To evaluate the pre-trained Selfish stacked-LSTM model on PTB, run:
 
 ```eval
