@@ -22,6 +22,14 @@ To train Selfish RHN on PTB dataset with GPU in the paper, run this command:
 python main.py --sparse --optimizer sgd --model RHN --cuda --tied --couple --seed 42 --nlayers 1 --growth random --death magnitude --redistribution none --density 0.472 --death-rate 0.5 --clip 0.25 --lr 15 --epochs 500 --dropout 0.65 --dropouth 0.25 --dropouti 0.65 --dropoute 0.2 --emsize 830 --nhid 830
 
 ```
+
+To train Selfish ONLSTM on PTB dataset with GPU in the paper, run this command:
+```
+cd ONLSTM
+python main_ONLSTM.py --sparse --optimizer sgd --growth random --death magnitude --redistribution none --density 0.45 --death-rate 0.5 --batch_size 20 --dropout 0.45 --dropouth 0.3 --dropouti 0.5 --nonmono 5 --wdrop 0.45 --chunk_size 10 --seed 141 --epoch 1000
+
+```
+
 Options:
 * --sparse - Enable sparse mode (remove this if want to train dense model)
 * --evaluate (str) - pretrained model path (default none)
@@ -48,7 +56,7 @@ To evaluate the pre-trained model, you need to replace the mymodel.pth with your
 
 You can download the pretrained Selfish stacked-LSTM models here:
 
-- [Selfish stacked-LSTM](https://drive.google.com/file/d/1xEDR61O5GirE_8wbFLUB3ecTsKRvnR9s/view?usp=sharing) trained on PTB. 
+- [Selfish stacked-LSTM](https://drive.google.com/file/d/1CgiGL__yUi7oFMbeQT6Zj43T2MWGsbhT/view?usp=sharing) trained on PTB. 
 
 > 📋Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
 
