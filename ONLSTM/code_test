@@ -1,6 +1,0 @@
-#!/bin/bash
-source /home/TUE/20180170/miniconda3/etc/profile.d/conda.sh
-source activate torch101
-
-python main_ONLSTM.py --sparse --optimizer sgd --growth random --death magnitude --redistribution none --density 0.45 --death-rate 0.5 --batch_size 20 --dropout 0.45 --dropouth 0.3 --dropouti 0.5 --nonmono 5 --wdrop 0.45 --chunk_size 10 --seed 141 --epoch 1000
-source deactivate
