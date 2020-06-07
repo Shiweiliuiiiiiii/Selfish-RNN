@@ -41,8 +41,8 @@ Options:
 * --redistribution (str) - redistribution mode. Choose from: momentum, magnitude, nonzeros, or none. (default none)
 * --density (float) - density level (default 0.33)
 * --death-rate (float) - initial pruning rate (default 0.5)
-
 ## Evaluation
+
 To evaluate the pre-trained Selfish stacked-LSTM model on PTB, run:
 
 ```eval
