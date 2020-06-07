@@ -62,8 +62,8 @@ Our model achieves the following performance on :
 | ----------------------|--------------|----------------------- | --------------- |
 | Selfish stacked-LSTM  |    0.33      |         73.79          |      71.72      |
 | Selfish RHN           |    0.472     |         62.10          |      60.35      |
-| Selfish ONLSTM_1000   |    0.450     |         58.17          |      56.31      |
-| Selfish ONLSTM_1300   |    0.450     |         57.67          |      55.82      |
+| Selfish ONLSTM_1000   |    0.450     |      58.17+-0.06       |   56.31+-0.10   |
+| Selfish ONLSTM_1300   |    0.450     |      57.67+-0.06       |   55.82+-0.11   |
 
 ### [Selfish AWD-LSTM-MoS on PTB:]
 
