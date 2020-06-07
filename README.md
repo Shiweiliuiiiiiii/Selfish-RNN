@@ -63,6 +63,7 @@ This model gives 71.83 test perplexity on PTB dataset. To evaluate this pre-trai
 ```eval
 python main.py --sparse --evaluate model_path --optimizer sgd --model LSTM --cuda --growth random --death magnitude --redistribution none --nonmono 5 --batch_size 20 --bptt 35 --lr 40 --clip 0.25 --seed 5 --emsize 1500 --nhid 1500 --nlayers 2 --death-rate 0.7 --dropout 0.65 --density 0.33 --epochs 100
 ```
+"model_path" is the path where you save this model.
 
 ## Results
 
