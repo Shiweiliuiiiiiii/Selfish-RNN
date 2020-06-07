@@ -10,7 +10,6 @@ The library requires PyTorch v1.0.1 and CUDA v9.0.
 You can download it via anaconda or pip, see [PyTorch/get-started](https://pytorch.org/get-started/locally/) for further information. 
 
 ## Training
-
 To train Selfish stacked-LSTM on PTB dataset with GPU in the paper, run this command:
 
 ```
@@ -34,6 +33,8 @@ Options:
 * --redistribution (str) - redistribution mode. Choose from: momentum, magnitude, nonzeros, or none. (default none)
 * --density (float) - density level (default 0.33)
 * --death-rate (float) - initial pruning rate (default 0.5)
+
+> 📋 We provide the training codes of Selfish stacked-LSTM and Selfish RHN. 
 
 ## Evaluation 
 
