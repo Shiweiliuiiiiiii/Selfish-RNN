@@ -69,7 +69,7 @@ python main.py --sparse --evaluate model_path --optimizer sgd --model LSTM --cud
 
 Our model achieves the following performance on :
 
-### [Selfish stacked-LSTM, RHN and ONLSTM on PTB:]
+### [Selfish stacked-LSTM, RHN and ONLSTM on PTB dataset:]
 
 | Model name            |   Sparsity   | Validation perplexity  | Test perplexity |
 | ----------------------|--------------|----------------------- | --------------- |
@@ -78,7 +78,7 @@ Our model achieves the following performance on :
 | Selfish ONLSTM_1000   |    0.450     |      58.17+-0.06       |   56.31+-0.10   |
 | Selfish ONLSTM_1300   |    0.450     |      57.67+-0.06       |   55.82+-0.11   |
 
-### [Selfish AWD-LSTM-MoS on PTB:]
+### [Selfish AWD-LSTM-MoS on Wikitext-2 dataset:]
 
 | Model name                              |   Sparsity   | Validation perplexity  | Test perplexity |
 | ----------------------------------------|--------------|----------------------- | --------------- |
