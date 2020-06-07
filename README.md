@@ -10,14 +10,14 @@ The library requires PyTorch v1.0.1 and CUDA v9.0.
 You can download it via anaconda or pip, see [PyTorch/get-started](https://pytorch.org/get-started/locally/) for further information. 
 
 ## Training
-To train Selfish stacked-LSTM on PTB dataset with GPU in the paper, run this command:
+> 📋 We provide the training codes of Selfish stacked-LSTM and Selfish RHN. 
 
+To train Selfish stacked-LSTM on PTB dataset with GPU in the paper, run this command:
 ```
 python main.py --sparse --optimizer sgd --model LSTM --cuda --growth random --death magnitude --redistribution none --nonmono 5 --batch_size 20 --bptt 35 --lr 40 --clip 0.25 --seed 5 --emsize 1500 --nhid 1500 --nlayers 2 --death-rate 0.7 --dropout 0.65 --density 0.33 --epochs 100
 ```
 
 To train Selfish RHN on PTB dataset with GPU in the paper, run this command:
-
 ```
 python main.py --sparse --optimizer sgd --model RHN --cuda --tied --couple --seed 42 --nlayers 1 --growth random --death magnitude --redistribution none --density 0.472 --death-rate 0.5 --clip 0.25 --lr 15 --epochs 500 --dropout 0.65 --dropouth 0.25 --dropouti 0.65 --dropoute 0.2 --emsize 830 --nhid 830
 
@@ -33,8 +33,6 @@ Options:
 * --redistribution (str) - redistribution mode. Choose from: momentum, magnitude, nonzeros, or none. (default none)
 * --density (float) - density level (default 0.33)
 * --death-rate (float) - initial pruning rate (default 0.5)
-
-> 📋 We provide the training codes of Selfish stacked-LSTM and Selfish RHN. 
 
 ## Evaluation 
 
@@ -64,10 +62,14 @@ Our model achieves the following performance on :
 | ----------------------|--------------|----------------------- | --------------- |
 | Selfish stacked-LSTM  |    0.33      |         73.79          |      71.72      |
 | Selfish RHN           |    0.472     |         62.10          |      60.35      |
-| Selfish ONLSTM        |    0.450     |       <a href="https://www.codecogs.com/eqnedit.php?latex=58.17\pm0.06" target="_blank"><img src="https://latex.codecogs.com/gif.latex?58.17\pm0.06" title="58.17\pm0.06" /></a>           |      <a href="https://www.codecogs.com/eqnedit.php?latex=56.31\pm0.10" target="_blank"><img src="https://latex.codecogs.com/gif.latex?56.31\pm0.10" title="56.31\pm0.10" /></a>      |
+| Selfish ONLSTM_1000   |    0.450     |       <a href="https://www.codecogs.com/eqnedit.php?latex=58.17\pm0.06" target="_blank"><img src="https://latex.codecogs.com/gif.latex?58.17\pm0.06" title="58.17\pm0.06" /></a>           |      <a href="https://www.codecogs.com/eqnedit.php?latex=56.31\pm0.10" target="_blank"><img src="https://latex.codecogs.com/gif.latex?56.31\pm0.10" title="56.31\pm0.10" /></a>      |
+| Selfish ONLSTM_1300   |    0.450     |       <a href="https://www.codecogs.com/eqnedit.php?latex=57.67\pm0.03" target="_blank"><img src="https://latex.codecogs.com/gif.latex?57.67\pm0.03" title="57.67\pm0.03" /></a>           |      <a href="https://www.codecogs.com/eqnedit.php?latex=55.82\pm0.11" target="_blank"><img src="https://latex.codecogs.com/gif.latex?55.82\pm0.11" title="55.82\pm0.11" /></a>      |
 
-> 📋Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+### [Selfish AWD-LSTM-MoS on PTB:]
 
+| Model name            |   Sparsity   | Validation perplexity  | Test perplexity |
+| ----------------------|--------------|----------------------- | --------------- |
+| Selfish AWD-LSTM-MoS  |    0.450     |         65.96          |      63.05      |
 
 ## Contributing
 
