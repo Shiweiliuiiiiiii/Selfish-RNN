@@ -67,9 +67,9 @@ Our model achieves the following performance on :
 
 ### [Selfish AWD-LSTM-MoS on PTB:]
 
-| Model name            |   Sparsity   | Validation perplexity  | Test perplexity |
-| ----------------------|--------------|----------------------- | --------------- |
-| Selfish AWD-LSTM-MoS  |    0.450     |         65.96          |      63.05      |
+| Model name                              |   Sparsity   | Validation perplexity  | Test perplexity |
+| ----------------------------------------|--------------|----------------------- | --------------- |
+| Selfish AWD-LSTM-MoS without finetuning |    0.450     |         65.96          |      63.05      |
 
 ## Contributing
 
