@@ -46,9 +46,9 @@ To evaluate the pre-trained model, you need to replace the mymodel.pth with your
 
 ## Pre-trained Models
 
-You can download pretrained models here:
+You can download the pretrained Selfish stacked-LSTM models here:
 
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
+- [Selfish stacked-LSTM](https://drive.google.com/file/d/1xEDR61O5GirE_8wbFLUB3ecTsKRvnR9s/view?usp=sharing) trained on PTB. 
 
 > 📋Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
 
