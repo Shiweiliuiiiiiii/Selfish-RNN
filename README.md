@@ -25,9 +25,10 @@ python main.py --sparse --optimizer sgd --model RHN --cuda --tied --couple --see
 ```
 Options:
 * --sparse - Enable sparse mode (remove this if want to train dense model)
-* --nlayers (int) - number of RNN layers (default 2)
+* --evaluate (str) - pretrained model path (default none)
 * --model (str) - type of recurrent net, choose from RHN and LSTM (default LSTM)
 * --optimizer (str) - type of optimizers, choose from sgd (Sparse NT-ASGD) and adam (default sgd)
+
 * --growth (str) - regrow mode. Choose from: momentum, random, gradient (default random)
 * --death (str) - pruning mode. Choose from: magnitude, SET, threshold (default magnitude)
 * --redistribution (str) - redistribution mode. Choose from: momentum, magnitude, nonzeros, or none. (default none)
@@ -36,10 +37,10 @@ Options:
 
 ## Evaluation 
 
-To evaluate my model on ImageNet, run:
+To evaluate the pre-trained model on PTB, run:
 
 ```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
+python main.py --sparse --evaluate mymodel.pth --optimizer sgd --model LSTM --cuda --growth random --death magnitude --redistribution none --nonmono 5 --batch_size 20 --bptt 35 --lr 40 --clip 0.25 --seed 5 --emsize 1500 --nhid 1500 --nlayers 2 --death-rate 0.7 --dropout 0.65 --density 0.33 --epochs 100
 ```
 
 > 📋Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
