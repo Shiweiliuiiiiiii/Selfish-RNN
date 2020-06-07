@@ -62,8 +62,8 @@ Our model achieves the following performance on :
 | ----------------------|--------------|----------------------- | --------------- |
 | Selfish stacked-LSTM  |    0.33      |         73.79          |      71.72      |
 | Selfish RHN           |    0.472     |         62.10          |      60.35      |
-| Selfish ONLSTM_1000   |    0.450     |       <a href="https://www.codecogs.com/eqnedit.php?latex=58.17\pm0.06" target="_blank"><img src="https://latex.codecogs.com/gif.latex?58.17\pm0.06" title="58.17\pm0.06" /></a>           |      <a href="https://www.codecogs.com/eqnedit.php?latex=56.31\pm0.10" target="_blank"><img src="https://latex.codecogs.com/gif.latex?56.31\pm0.10" title="56.31\pm0.10" /></a>      |
-| Selfish ONLSTM_1300   |    0.450     |       <a href="https://www.codecogs.com/eqnedit.php?latex=57.67\pm0.03" target="_blank"><img src="https://latex.codecogs.com/gif.latex?57.67\pm0.03" title="57.67\pm0.03" /></a>           |      <a href="https://www.codecogs.com/eqnedit.php?latex=55.82\pm0.11" target="_blank"><img src="https://latex.codecogs.com/gif.latex?55.82\pm0.11" title="55.82\pm0.11" /></a>      |
+| Selfish ONLSTM_1000   |    0.450     |         58.17          |      56.31      |
+| Selfish ONLSTM_1300   |    0.450     |         57.67          |      55.82      |
 
 ### [Selfish AWD-LSTM-MoS on PTB:]
 
