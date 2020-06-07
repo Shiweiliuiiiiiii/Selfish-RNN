@@ -23,8 +23,17 @@ To train Selfish RHN on PTB dataset with GPU in the paper, run this command:
 python main.py --sparse --optimizer sgd --model RHN --cuda --tied --couple --seed 42 --nlayers 1 --growth random --death magnitude --redistribution none --density 0.472 --death-rate 0.5 --clip 0.25 --lr 15 --epochs 500 --dropout 0.65 --dropouth 0.25 --dropouti 0.65 --dropoute 0.2 --emsize 830 --nhid 830
 
 ```
+Options:
+* --sparse - Enable sparse mode (remove this if want to train dense model)
+* --nlayers (int) - number of RNN layers (default 2)
+* --model (str) - type of recurrent net, choose from RHN and LSTM (default LSTM)
+* --growth (str) - regrow mode. Choose from: momentum, random, gradient (default random)
+* --death (str) - pruning mode. Choose from: magnitude, SET, threshold (default magnitude)
+* --redistribution (str) - redistribution mode. Choose from: momentum, magnitude, nonzeros, or none. (default none)
+* --density (float) - density level (default 0.33)
+* --death-rate (float) - initial pruning rate (default 0.5)
 
-## Evaluation
+## Evaluation 
 
 To evaluate my model on ImageNet, run:
 
