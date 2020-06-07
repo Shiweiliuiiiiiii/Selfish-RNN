@@ -1,6 +1,6 @@
 # Selfish-RNN Sparse Recurrent Neural Networks with Adaptive Connectivity
 
-This repository is the official implementation of Neurips 2020 submission ID 6137: Selfish-RNN Sparse Recurrent Neural Networks with Adaptive Connectivity
+This repository is the official implementation of Neurips 2020 submission with ID 6137: Selfish-RNN Sparse Recurrent Neural Networks with Adaptive Connectivity
 
 ![](Selfish-RNN.png)
 
