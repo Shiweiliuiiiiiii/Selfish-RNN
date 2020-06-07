@@ -58,11 +58,13 @@ You can download pretrained models here:
 
 Our model achieves the following performance on :
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
+### [Selfish stacked-LSTM, RHN and ONLSTM on PTB:]
 
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
+| Model name            |   Sparsity   | Validation perplexity  | Test perplexity |
+| ----------------------|--------------|----------------------- | --------------- |
+| Selfish stacked-LSTM  |    0.33      |         73.79          |      71.72      |
+| Selfish RHN           |    0.472     |         62.10          |      60.35      |
+| Selfish ONLSTM        |    0.450     |       &58.17 \pm 0.06&           |      60.35      |
 
 > 📋Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
 
