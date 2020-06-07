@@ -27,6 +27,7 @@ Options:
 * --sparse - Enable sparse mode (remove this if want to train dense model)
 * --nlayers (int) - number of RNN layers (default 2)
 * --model (str) - type of recurrent net, choose from RHN and LSTM (default LSTM)
+* --optimizer (str) - type of optimizers, choose from sgd (Sparse NT-ASGD) and adam (default sgd)
 * --growth (str) - regrow mode. Choose from: momentum, random, gradient (default random)
 * --death (str) - pruning mode. Choose from: magnitude, SET, threshold (default magnitude)
 * --redistribution (str) - redistribution mode. Choose from: momentum, magnitude, nonzeros, or none. (default none)
