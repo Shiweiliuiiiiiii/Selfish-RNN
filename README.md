@@ -10,20 +10,24 @@ The library requires PyTorch v1.0.1 and CUDA v9.0.
 You can download it via anaconda or pip, see [PyTorch/get-started](https://pytorch.org/get-started/locally/) for further information. 
 
 ## Training
+
 We provide the training codes of Selfish stacked-LSTM and Selfish RHN. 
 
 To train Selfish stacked-LSTM on PTB dataset with GPU in the paper, run this command:
+
 ```
 python main.py --sparse --optimizer sgd --model LSTM --cuda --growth random --death magnitude --redistribution none --nonmono 5 --batch_size 20 --bptt 35 --lr 40 --clip 0.25 --seed 1111 --emsize 1500 --nhid 1500 --nlayers 2 --death-rate 0.8 --dropout 0.65 --density 0.33 --epochs 100
 ```
 
 To train Selfish RHN on PTB dataset with GPU in the paper, run this command:
+
 ```
 python main.py --sparse --optimizer sgd --model RHN --cuda --tied --couple --seed 42 --nlayers 1 --growth random --death magnitude --redistribution none --density 0.472 --death-rate 0.5 --clip 0.25 --lr 15 --epochs 500 --dropout 0.65 --dropouth 0.25 --dropouti 0.65 --dropoute 0.2 --emsize 830 --nhid 830
 
 ```
 
 To train Selfish ONLSTM on PTB dataset with GPU in the paper, run this two commands:
+
 ```
 cd ONLSTM
 python main_ONLSTM.py --sparse --optimizer sgd --growth random --death magnitude --redistribution none --density 0.45 --death-rate 0.5 --batch_size 20 --dropout 0.45 --dropouth 0.3 --dropouti 0.5 --nonmono 5 --wdrop 0.45 --chunk_size 10 --seed 141 --epoch 1000
