@@ -40,8 +40,8 @@ Options:
 * --model (str) - type of recurrent net, choose from RHN and LSTM (default LSTM)
 * --optimizer (str) - type of optimizers, choose from sgd (Sparse NT-ASGD) and adam (default sgd)
 
-* --growth (str) - growth mode. Choose from: random, gradient (default random)
-* --death (str) - removing mode. Choose from: magnitude, SET, threshold (default magnitude)
+* --growth (str) - growth mode. Choose from: random, random_rnn, gradient (default random)
+* --death (str) - removing mode. Choose from: magnitude, magnitude_rnn, SET, threshold (default magnitude)
 * --redistribution (str) - redistribution mode. Choose from: magnitude, nonzeros, or none. (default none)
 * --density (float) - density level (default 0.33)
 * --death-rate (float) - initial pruning rate (default 0.5)
