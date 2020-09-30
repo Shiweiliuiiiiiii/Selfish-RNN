@@ -12,6 +12,7 @@ def add_sparse_args(parser):
     parser.add_argument('--death-rate', type=float, default=0.50, help='The pruning rate / death rate.')
     parser.add_argument('--density', type=float, default=0.33, help='The density of the overall sparse network.')
     parser.add_argument('--sparse', action='store_true', help='Enable sparse mode. Default: True.')
+    parser.add_argument('--sparse_init', type=str, default='uniform', help='sparse initialization')
 
 class CosineDecay(object):
     def __init__(self, death_rate, T_max, eta_min=0.005, last_epoch=-1):
@@ -97,9 +98,9 @@ class Masking(object):
         self.tolerance = 0.02
         self.prune_every_k_steps = None
 
-    def init(self, mode='enforce_density_per_layer', density=0.05):
+    def init(self, mode='uniform', density=0.05):
         self.sparsity = density
-        if mode == 'enforce_density_per_layer':
+        if mode == 'uniform':
             self.baseline_nonzero = 0
             for module in self.modules:
                 for name, weight in module.named_parameters():
@@ -108,7 +109,7 @@ class Masking(object):
                     self.baseline_nonzero += weight.numel()*density
             self.apply_mask()
 
-        elif mode == 'size_proportional':
+        elif mode == 'ER':
             # initialization used in sparse evolutionary training
             total_params = 0
             self.baseline_nonzero = 0
