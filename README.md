@@ -1,6 +1,6 @@
-# Selfish-RNN Sparse Recurrent Neural Networks with Adaptive Connectivity
+# Selfish Sparse RNN Training
 
-This repository is the official implementation of Neurips 2020 submission with ID 6137: Selfish-RNN Sparse Recurrent Neural Networks with Adaptive Connectivity
+This repository is the official implementation of ICLR2021 submission : Selfish Sparse RNN Training
 
 ![](Selfish-RNN.png)
 
@@ -40,9 +40,9 @@ Options:
 * --model (str) - type of recurrent net, choose from RHN and LSTM (default LSTM)
 * --optimizer (str) - type of optimizers, choose from sgd (Sparse NT-ASGD) and adam (default sgd)
 
-* --growth (str) - regrow mode. Choose from: momentum, random, gradient (default random)
-* --death (str) - pruning mode. Choose from: magnitude, SET, threshold (default magnitude)
-* --redistribution (str) - redistribution mode. Choose from: momentum, magnitude, nonzeros, or none. (default none)
+* --growth (str) - growth mode. Choose from: random, gradient (default random)
+* --death (str) - removing mode. Choose from: magnitude, SET, threshold (default magnitude)
+* --redistribution (str) - redistribution mode. Choose from: magnitude, nonzeros, or none. (default none)
 * --density (float) - density level (default 0.33)
 * --death-rate (float) - initial pruning rate (default 0.5)
 
@@ -77,13 +77,13 @@ Our model achieves the following performance on :
 
 | Model name            |   Sparsity   | Validation perplexity  | Test perplexity |
 | ----------------------|--------------|----------------------- | --------------- |
-| Selfish stacked-LSTM  |    0.33      |         73.79          |      71.72      |
-| Selfish RHN           |    0.472     |         62.10          |      60.35      |
-| Selfish ONLSTM_1000   |    0.450     |      58.17+-0.06       |   56.31+-0.10   |
-| Selfish ONLSTM_1300   |    0.450     |      57.67+-0.06       |   55.82+-0.11   |
+| Selfish stacked-LSTM  |    0.67      |         73.79          |      71.65      |
+| Selfish RHN           |    0.53      |         62.10          |      60.35      |
+| Selfish ONLSTM_1000   |    0.55      |      58.17+-0.06       |   56.31+-0.10   |
+| Selfish ONLSTM_1300   |    0.55      |      57.67+-0.03       |   55.82+-0.11   |
 
 ### [Selfish AWD-LSTM-MoS on Wikitext-2 dataset:]
 
 | Model name                              |   Sparsity   | Validation perplexity  | Test perplexity |
 | ----------------------------------------|--------------|----------------------- | --------------- |
-| Selfish AWD-LSTM-MoS without finetuning |    0.450     |         65.96          |      63.05      |
+| Selfish AWD-LSTM-MoS without finetuning |    0.55      |         65.96          |      63.05      |
