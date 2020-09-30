@@ -231,7 +231,7 @@ else:
             decay = CosineDecay(args.death_rate, args.epochs * len(train_data) // args.bptt)
             mask = Masking(optimizer, death_rate=args.death_rate, death_mode=args.death, death_rate_decay=decay, growth_mode=args.growth,
                            redistribution_mode=args.redistribution, model=args.model)
-            mask.add_module(model, density=args.density)
+            mask.add_module(model, sparse_init=args.sparse_init, density=args.density)
 
         # Loop over epochs.
         for epoch in range(1, args.epochs + 1):
