@@ -60,9 +60,9 @@ To evaluate the pre-trained model, you need to replace the model_path with your 
 
 You can download the pretrained Selfish stacked-LSTM models here:
 
-- [Selfish stacked-LSTM](https://drive.google.com/file/d/1CgiGL__yUi7oFMbeQT6Zj43T2MWGsbhT/view?usp=sharing) trained on PTB. 
+- [Selfish stacked-LSTM](https://drive.google.com/file/d/1CdzNH_q6Xo199Sx7O-lRWdFCqdsBgMfA/view?usp=sharing) trained on PTB. 
 
-This model gives 71.83 test perplexity on PTB dataset. To evaluate this pre-trained model, you need to run:
+This model gives 71.65 test perplexity on PTB dataset. To evaluate this pre-trained model, you need to run:
 
 ```eval
 python main.py --sparse --evaluate model_path --optimizer sgd --model LSTM --cuda --growth random --death magnitude --redistribution none --nonmono 5 --batch_size 20 --bptt 35 --lr 40 --clip 0.25 --seed 5 --emsize 1500 --nhid 1500 --nlayers 2 --death-rate 0.7 --dropout 0.65 --density 0.33 --epochs 100
