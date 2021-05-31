@@ -1,6 +1,6 @@
 # Selfish Sparse RNN Training
 
-This repository is the official implementation of ICLR2021 submission : Selfish Sparse RNN Training
+This repository is the official implementation of ICML2021: [Selfish Sparse RNN Training](https://arxiv.org/abs/2101.09048)
 
 ![](Selfish-RNN.png)
 
