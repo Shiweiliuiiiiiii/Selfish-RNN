@@ -6,7 +6,9 @@ This repository is the official implementation of ICML2021: [Selfish Sparse RNN 
 
 ## Requirements
 Our code is highly based on the awesome library of [Sparse Momentum](https://github.com/TimDettmers/sparse_learning).
+
 The library requires PyTorch v1.0.1 and CUDA v9.0. 
+
 You can download it via anaconda or pip, see [PyTorch/get-started](https://pytorch.org/get-started/locally/) for further information. 
 
 ## Training
