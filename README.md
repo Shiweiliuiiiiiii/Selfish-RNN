@@ -90,3 +90,15 @@ Our model achieves the following performance on :
 | Model name                              |   Sparsity   | Validation perplexity  | Test perplexity |
 | ----------------------------------------|--------------|----------------------- | --------------- |
 | Selfish AWD-LSTM-MoS without finetuning |    0.55      |         65.96          |      63.05      |
+
+### [Apply Selfish-RNN to your own architectures]
+
+Apply Selfish-RNN to train other models is simple, you just need three steps: 
+
+(1) creating masks with
+
+decay = CosineDecay(args.death_rate, args.epochs * len(train_data) // args.bptt)
+mask = Masking(optimizer, death_rate=args.death_rate, death_mode=args.death, death_rate_decay=decay, growth_mode=args.growth, redistribution_mode=args.redistribution, model=args.model)
+mask.add_module(model, sparse_init=args.sparse_init, density=args.density)
+
+(2) change optimizer.step() to mask.step() in the training function. 
